@@ -1,0 +1,12 @@
+[user]
+	email = edwin.zhai@intel.com
+	name = Edwin Zhai
+[core]
+	editor = vi -c 'set tw=70'
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
