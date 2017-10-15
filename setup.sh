@@ -49,14 +49,7 @@ fi
 
 #sudo pip install pycscope
 
-cp data/.vimrc ~/
 cp data/.gitconfig ~/
 cp data/id_rsa* ~/.ssh/
 
-mkdir ~/.vim/after/plugin -p
-cp data/cscope_maps_v2.vim ~/.vim/after/plugin/
-
-
-
-
-
+./005-vim.sh
