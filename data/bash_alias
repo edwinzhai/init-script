@@ -1,1 +1,1 @@
-vim -c set 'shiftwidth=8 softtabstop=8 noexpandtab'
+alias vit='vim -c "set shiftwidth=8 softtabstop=8 noexpandtab"'
