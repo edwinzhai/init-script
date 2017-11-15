@@ -32,11 +32,12 @@ noremap <C-j> J
 cmap <C-e> <C-r>"
 map! <C-e> <C-r>"
 
-"map C-w p as jump to preview window
-map <C-w>p <C-w>P
+"map C-w v as jump to preview window
+noremap <C-w>v <C-w>P
 "map C-w e as jump to buffer window
-map <C-w>e <C-w>t <C-w>j
+"map <C-w>e <C-w>t <C-w>j
 set previewheight=15
+set splitbelow
 
 "use arrow key to navigate window
 noremap <C-Down>  <C-W>j
@@ -103,10 +104,11 @@ call plug#begin('~/.vim/after/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
 
-"disabled due to no ctags on windows
 Plug 'vim-scripts/taglist.vim'
 
 Plug 'tpope/vim-commentary'
+
+Plug 'Rip-Rip/clang_complete'
 
 " Any valid git URL is allowed
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -138,7 +140,10 @@ call plug#end()
 
 "hotkey for auto installed plugin
 "nmap <C-m> :CtrlP<CR>
-let g:ctrlp_map = '<c-m>'
-let g:ctrlp_cmd = 'CtrlPMRU'
+"C-/ to trigger ctrlp
+let g:ctrlp_map = '<c-_>'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 
 let Tlist_Show_One_File = 1
+
+let g:clang_library_path='/usr/lib/llvm-3.4/lib/libclang.so.1'

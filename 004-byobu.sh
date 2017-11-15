@@ -37,7 +37,7 @@ bind-key -n M-6 select-window -t :6
 bind-key -n M-7 select-window -t :7
 bind-key -n M-8 select-window -t :8
 bind-key -n M-9 select-window -t :9
-bind-key -n M-w last-pane
+bind-key -n M-p last-pane
 EOF
 fi
 
