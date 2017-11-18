@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+sudo apt-get install -y vim ctags
 
 cp data/.vimrc ~/
 

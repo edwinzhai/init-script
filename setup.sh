@@ -1,5 +1,7 @@
-#!/bin/sh
-sudo apt-get install cscope quilt git-review patchutils
+#!/bin/bash
+./001-package.sh
+
+sudo apt-get -y install cscope quilt git-review patchutils
 
 #sudo pip install pycscope
 
