@@ -1,0 +1,2 @@
+#!/bin/sh
+find . -name '*.h' -printf "%h\n"| uniq | sed -e 's/^/-I/' > .clang_complete

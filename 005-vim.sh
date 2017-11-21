@@ -2,6 +2,9 @@
 
 sudo apt-get install -y vim ctags
 
+#need libcang1 for clang_complete plugin
+sudo apt-get install -y libclang1
+
 cp data/.vimrc ~/
 
 mkdir ~/.vim/after/plugin -p

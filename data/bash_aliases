@@ -1,0 +1,7 @@
+alias llt='ls -ltr'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias vit='vim -c "set shiftwidth=8 softtabstop=8 noexpandtab"'
+
+#also put other stuff in alias configuration
+export PATH=$PATH:$HOME/bin
