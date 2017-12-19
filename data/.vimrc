@@ -110,6 +110,9 @@ Plug 'tpope/vim-commentary'
 
 Plug 'Rip-Rip/clang_complete'
 
+Plug 'tpope/vim-fugitive'
+
+Plug 'Rip-Rip/clang_complete'
 " Any valid git URL is allowed
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
@@ -140,10 +143,27 @@ call plug#end()
 
 "hotkey for auto installed plugin
 "nmap <C-m> :CtrlP<CR>
-"C-/ to trigger ctrlp
-let g:ctrlp_map = '<c-_>'
+"C-/ / to trigger ctrlp
+let g:ctrlp_map = '<c-_>/'
 let g:ctrlp_cmd = 'CtrlPBuffer'
 
 let Tlist_Show_One_File = 1
 
 let g:clang_library_path='/usr/lib/llvm-3.4/lib/libclang.so.1'
+
+"setup for fugitive
+nmap <C-_>b :!git branch<CR>
+nmap <C-_>l :!git log<CR>
+nmap <C-_>L :Glog<CR>
+nmap <C-_>s :Gstatus<CR>
+nmap <C-_>d :!git diff<CR>
+nmap <C-_>D :Gdiff<CR>
+nmap <C-_>a :Gblame<CR>
+nmap <C-_>f :!git fetch origin<CR>
+nmap <C-_>i :!git commit -a -s 
+nmap <C-_>o :!git checkout 
+"Gpull
+"Gread
+"Gwrite
+"indicates current branch in status line
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
