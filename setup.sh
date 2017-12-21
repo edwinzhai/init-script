@@ -16,3 +16,5 @@ cp -a data/bin ~/
 
 ./004-byobu.sh
 ./005-vim.sh
+
+./009-dev.sh
