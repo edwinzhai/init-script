@@ -18,3 +18,4 @@ cp -a data/bin ~/
 ./005-vim.sh
 
 #./009-dev.sh
+./010-docker.sh
