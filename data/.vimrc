@@ -112,6 +112,8 @@ Plug 'Rip-Rip/clang_complete'
 
 Plug 'tpope/vim-fugitive'
 
+Plug 'tpope/vim-dispatch'
+
 Plug 'Rip-Rip/clang_complete'
 " Any valid git URL is allowed
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
