@@ -3,10 +3,11 @@
 
 WDIR="."
 
-echo "Finding relevant source files for skyos hypervisor project..."
+echo "Finding relevant source files for skyos-h project..."
 find $WDIR                                                                \
-    -path "$WDIR/os-framework*" -prune -o                                          \
+    -path "$WDIR/.helpers-venv*" -prune -o                                \
     -path "$WDIR/tsx*" -prune -o                                          \
     -path "$WDIR/hyp_validation*" -prune -o                                \
     -path "$WDIR/nvos-system-test*" -prune -o                                      \
-    \( -name "*.[chxsS]" -o -name "*.hpp" -o -name "*.cpp" \) -print > $WDIR/cscope.files
+    \( -name "*.[chxsS]" -o -name "*.hpp" -o -name "*.cpp" \) -print0 | xargs -0 realpath > $WDIR/cscope.files
+#    -path "$WDIR/os-framework*" -prune -o                                          \
