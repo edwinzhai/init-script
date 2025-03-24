@@ -1,0 +1,12 @@
+#!/bin/sh
+#!/bin/bash
+
+WDIR="."
+
+echo "Finding relevant source files for skyos hypervisor project..."
+find $WDIR                                                                \
+    -path "$WDIR/os-framework*" -prune -o                                          \
+    -path "$WDIR/tsx*" -prune -o                                          \
+    -path "$WDIR/hyp_validation*" -prune -o                                \
+    -path "$WDIR/nvos-system-test*" -prune -o                                      \
+    \( -name "*.[chxsS]" -o -name "*.hpp" -o -name "*.cpp" \) -print > $WDIR/cscope.files
