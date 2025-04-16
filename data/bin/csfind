@@ -1,3 +1,4 @@
 #!/bin/bash
 
-find . -name '*.[chsS]' -exec realpath {} \; > cscope.files
+find . -path "*/.pc*" -prune -o \
+     \( -name "*.[chxsS]" -o -name "*.hpp" -o -name "*.cpp" \) -exec realpath {} \; > cscope.files

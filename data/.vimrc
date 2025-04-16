@@ -11,7 +11,10 @@ set incsearch
 set hlsearch
 set sc
 set ch=1
-set mouse=a
+
+"do not enable mouse in Visual mode so that we have a chance to copy&paste the contents
+set mouse=ni
+
 "vi in screen can't use mouse because of $term setting, this is a work around, no need for "screen -T xterm"
 set ttymouse=xterm
 set ignorecase smartcase
